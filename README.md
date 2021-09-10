@@ -1,6 +1,6 @@
-Quill
------
->Quill feature tests.
+Scalikejdbc
+-----------
+>Scalikejdbc feature tests.
 
 Test
 ----
