@@ -1,6 +1,6 @@
 Scalikejdbc
 -----------
->Scalikejdbc feature tests.
+>Scalikejdbc feature tests and performance benchmark.
 
 Test
 ----
