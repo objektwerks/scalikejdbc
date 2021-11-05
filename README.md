@@ -12,6 +12,7 @@ Benchmark
 
 Results
 -------
-1. addTodo - 44.293
-2. listTodos - 40.524
->Total time: 402 s (06:42), 10 warmups, 10 iterations, in microseconds, completed 2021.9.10
+>OpenJDK 64-Bit Server VM (Zulu 8.56.0.23-CA-macos-aarch64) (build 25.302-b08, mixed mode)
+1. addTodo - 45.819
+2. listTodos - 42.415
+>Total time: 403 s (06:43), 10 warmups, 10 iterations, in microseconds, completed 2021.11.5
