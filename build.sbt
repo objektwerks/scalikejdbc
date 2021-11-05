@@ -3,7 +3,7 @@ enablePlugins(JmhPlugin)
 name := "scalikejdbc"
 organization := "objektwerks"
 version := "0.1-SNAPSHOT"
-scalaVersion := "2.13.6"
+scalaVersion := "2.13.7"
 libraryDependencies ++= {
   val scalikejdbcVersion = "3.5.0"
   val quillVersion = "3.10.0"
