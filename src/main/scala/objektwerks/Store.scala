@@ -18,13 +18,13 @@ class Store(conf: Config) {
 
   def addTodo(todo: Todo): Int = {
     DB localTx { implicit session =>
-      sql"insert into todo(task) values(${todo.task})".update().apply()
+      sql"insert into todo(task) values(${todo.task})".update()
     }
   }
 
   def updateTodo(todo: Todo): Unit = {
     DB localTx { implicit session =>
-      sql"update todo set task = ${todo.task} where id = ${todo.id}".update().apply()
+      sql"update todo set task = ${todo.task} where id = ${todo.id}".update()
     }
     ()
   }
@@ -34,7 +34,6 @@ class Store(conf: Config) {
       sql"select * from todo"
         .map(rs => Todo( rs.int("id"), rs.string("task") ) )
         .list()
-        .apply()
     }
   }
 }
