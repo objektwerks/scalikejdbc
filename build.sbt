@@ -9,7 +9,7 @@ libraryDependencies ++= {
   val quillVersion = "3.10.0"
   Seq(
     "org.scalikejdbc" %% "scalikejdbc" % scalikejdbcVersion,
-    "com.h2database" % "h2" % "1.4.200",
+    "com.h2database" % "h2" % "2.0.202",
     "com.typesafe" % "config" % "1.4.1",
     "com.typesafe.scala-logging" %% "scala-logging" % "3.9.4",
     "ch.qos.logback" % "logback-classic" % "1.2.7",
