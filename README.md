@@ -13,7 +13,7 @@ Benchmark
 
 Results
 -------
->OpenJDK Runtime Environment (Zulu 8.56.0.23-CA-macos-aarch64) (build 1.8.0_302-b08)
+>OpenJDK Runtime Environment Zulu17.30+51-CA (build 17.0.1+12-LTS), Scala 2.13.7, Apple M1
 1. addTodo - 48.485
 2. listTodos - 42.427
 3. updateTodo - 48.388
