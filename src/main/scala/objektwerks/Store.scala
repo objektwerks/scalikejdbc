@@ -18,7 +18,7 @@ class Store(conf: Config):
 
   def addTodo(todo: Todo): Int =
     DB localTx { implicit session =>
-      sql"insert into todo(task) values(${todo.task})".update()
+      sql"insert into todo(task) values(${todo.task})".updateAndReturnGeneratedKey().toInt
     }
 
   def updateTodo(todo: Todo): Unit =
