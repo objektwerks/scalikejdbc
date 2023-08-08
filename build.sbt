@@ -6,7 +6,6 @@ version := "0.1-SNAPSHOT"
 scalaVersion := "3.3.1-RC4"
 libraryDependencies ++= {
   val scalikejdbcVersion = "4.0.0"
-  val quillVersion = "3.10.0"
   Seq(
     "org.scalikejdbc" %% "scalikejdbc" % scalikejdbcVersion,
     "com.h2database" % "h2" % "2.2.220",
