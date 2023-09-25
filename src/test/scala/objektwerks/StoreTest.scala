@@ -4,10 +4,10 @@ import com.typesafe.config.ConfigFactory
 
 import org.scalatest.funsuite.AnyFunSuite
 
-class StoreTest extends AnyFunSuite {
+final class StoreTest extends AnyFunSuite:
   val conf = ConfigFactory.load("test.conf")
 
-  test("store") {
+  test("store"):
     val store = Store(conf)
 
     val todo = Todo(task = "wash car")
@@ -22,5 +22,3 @@ class StoreTest extends AnyFunSuite {
     val todos = store.listTodos()
     println(s"*** Todos = ${todos.toString}")
     assert( todos.nonEmpty )
-  }
-}
