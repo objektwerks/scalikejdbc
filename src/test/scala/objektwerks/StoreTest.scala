@@ -5,8 +5,8 @@ import com.typesafe.config.ConfigFactory
 import org.scalatest.funsuite.AnyFunSuite
 
 final class StoreTest extends AnyFunSuite:
-  val conf = ConfigFactory.load("test.conf")
-    val store = Store(conf)
+  val config = ConfigFactory.load("test.conf")
+  val store = Store(config)
 
   test("store"):
     var todo = Todo(task = "wash car")

@@ -8,8 +8,8 @@ import java.util.concurrent.TimeUnit
 import org.openjdk.jmh.annotations._
 
 object Performance:
-  val conf = ConfigFactory.load("app.conf")
-  val store = Store(conf)
+  val config = ConfigFactory.load("app.conf")
+  val store = Store(config)
 
 @State(Scope.Thread)
 @BenchmarkMode(Array(Mode.AverageTime))
