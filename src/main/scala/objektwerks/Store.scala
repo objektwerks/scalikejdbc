@@ -2,34 +2,17 @@ package objektwerks
 
 import com.typesafe.config.Config
 
-import java.nio.file.Files
-import java.nio.file.Path
-import javax.sql.DataSource
+import scalikejdbc._
 
-import org.h2.jdbcx.JdbcConnectionPool
-
-import scala.util.Using
-
-import scalikejdbc.*
-
-private object Store:
-  def createDataSource(config: Config): DataSource =
-    val ds = JdbcConnectionPool.create(
-      config.getString("ds.url"),
-      config.getString("ds.user"),
-      config.getString("ds.password")
-    )
-
-    Using.Manager( use =>
-      val connection = use( ds.getConnection )
-      val statement = use( connection.createStatement )
-      val sql = Files.readString( Path.of( config.getString("ds.ddl") ) )
-      statement.execute(sql)
-    )
-    ds
+object Store:
+  def apply(config: Config): Store = new Store(config)
 
 class Store(config: Config):
-  private val _: DataSource = Store.createDataSource(config)
+  val url = config.getString("db.url")
+  val user = config.getString("db.user")
+  val password = config.getString("db.password")
+
+  ConnectionPool.singleton(url, user, password)
 
   def addTodo(todo: Todo): Todo =
     val id = DB localTx { implicit session =>
