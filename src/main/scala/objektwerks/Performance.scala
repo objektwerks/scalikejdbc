@@ -30,7 +30,7 @@ class Performance():
     id
 
   @Benchmark
-  def updateTodo(): Unit =
+  def updateTodo(): Boolean =
     todo = todo.copy(task = UUID.randomUUID.toString)
     store.updateTodo(todo)
 
