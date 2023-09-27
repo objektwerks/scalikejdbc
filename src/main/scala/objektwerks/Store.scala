@@ -2,7 +2,7 @@ package objektwerks
 
 import com.typesafe.config.Config
 
-import scalikejdbc._
+import scalikejdbc.*
 
 object Store:
   def apply(config: Config): Store = new Store(config)
