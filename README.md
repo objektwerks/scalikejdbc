@@ -1,6 +1,6 @@
 Scalikejdbc
 -----------
->Scalikejdbc feature tests and performance benchmark against H2 and Scala 3.
+>Scalikejdbc feature test and performance benchmark against H2 and Scala 3.
 
 Test
 ----
