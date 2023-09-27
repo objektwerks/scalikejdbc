@@ -19,11 +19,11 @@ class Store(conf: Config):
       sql"insert into todo(task) values(${todo.task})".updateAndReturnGeneratedKey().toInt
     }
 
-  def updateTodo(todo: Todo): Unit =
+  def updateTodo(todo: Todo): Boolean =
     DB localTx { implicit session =>
       sql"update todo set task = ${todo.task} where id = ${todo.id}".update()
     }
-    ()
+    true
 
   def listTodos(): Seq[Todo] =
     DB readOnly { implicit session =>
