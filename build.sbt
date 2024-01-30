@@ -3,7 +3,7 @@ enablePlugins(JmhPlugin)
 name := "scalikejdbc"
 organization := "objektwerks"
 version := "0.1-SNAPSHOT"
-scalaVersion := "3.4.0-RC2"
+scalaVersion := "3.4.0-RC3"
 libraryDependencies ++= {
   Seq(
     "org.scalikejdbc" %% "scalikejdbc" % "4.1.0",
