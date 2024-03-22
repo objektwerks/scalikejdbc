@@ -17,7 +17,7 @@ Results
 1. addTodo - 32.528
 2. updateTodo - 30.165
 3. listTodos - 25.936
->Total time: 604 s (10:04), 10 warmups, 10 iterations, average time in microseconds, completed **2024.3.22**
+>Total time: 602 s (10:02), 10 warmups, 10 iterations, average time in microseconds, completed **2024.3.22**
 
 >OpenJDK Runtime Environment Zulu21.28+85-CA (build 21+35), Scala 3.1.1, Apple M1
 1. addTodo - 31.347
