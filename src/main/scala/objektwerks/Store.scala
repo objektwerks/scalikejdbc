@@ -11,11 +11,10 @@ final class Store(config: Config):
 
   ConnectionPool.singleton(url, user, password)
 
-  def addTodo(todo: Todo): Todo =
-    val id = DB localTx { implicit session =>
-      sql"insert into todo(task) values(${todo.task})".updateAndReturnGeneratedKey().toInt
+  def addTodo(todo: Todo): Long =
+    DB localTx { implicit session =>
+      sql"insert into todo(task) values(${todo.task})".updateAndReturnGeneratedKey()
     }
-    todo.copy(id = id)
 
   def updateTodo(todo: Todo): Int =
     DB localTx { implicit session =>
