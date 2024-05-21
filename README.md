@@ -40,3 +40,7 @@ Results
 2. updateTodo - 29.617
 3. listTodos - 25.164
 >Total time: 602 s (10:04), 10 warmups, 10 iterations, average time in microseconds, completed 2023.9.27
+
+Resources
+---------
+* [ScalikeJdbc](https://scalikejdbc.org/)
