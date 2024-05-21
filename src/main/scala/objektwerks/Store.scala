@@ -17,11 +17,10 @@ final class Store(config: Config):
     }
     todo.copy(id = id)
 
-  def updateTodo(todo: Todo): Boolean =
+  def updateTodo(todo: Todo): Int =
     DB localTx { implicit session =>
       sql"update todo set task = ${todo.task} where id = ${todo.id}".update()
     }
-    true
 
   def listTodos(): Seq[Todo] =
     DB readOnly { implicit session =>
