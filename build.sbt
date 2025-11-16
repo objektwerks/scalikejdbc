@@ -6,7 +6,7 @@ version := "0.3-SNAPSHOT"
 scalaVersion := "3.7.4"
 libraryDependencies ++= {
   Seq(
-    "org.scalikejdbc" %% "scalikejdbc" % "4.3.4",
+    "org.scalikejdbc" %% "scalikejdbc" % "4.3.5",
     "com.h2database" % "h2" % "2.4.240",
     "com.typesafe" % "config" % "1.4.3",
     "ch.qos.logback" % "logback-classic" % "1.5.21",
